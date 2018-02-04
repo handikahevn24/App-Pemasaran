@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Produk;
 
-class Produk extends Controller
+class ControllerProduk extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +16,7 @@ class Produk extends Controller
      */
     public function index()
     {
-        //
+        $data_produk = Produk::all();
     }
 
     /**
