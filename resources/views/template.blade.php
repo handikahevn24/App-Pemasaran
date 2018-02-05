@@ -15,7 +15,10 @@
         <script src="{{ asset('http://localhost:8000/js/respond.min.js') }}"></script>
         -->
     </head>
+
+
     <body>
+        @include('navbar')
         @yield('main')
 
         @yield('footer')

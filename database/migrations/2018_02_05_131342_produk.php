@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProdukTable extends Migration
+class Produk extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,13 @@ class CreateProdukTable extends Migration
      */
     public function up()
     {
-        Schema::table('produk', function (Blueprint $table) {
-            //
+        //
+        Schema::create('produk', function (Blueprint $table){
             $table->increments('id');
             $table->string('nama_produk');
-            $table->timestamp();
+            $table->integer('harga_produk');
+            $table->integer('stok');
+            $table->timestamps();
         });
     }
 
